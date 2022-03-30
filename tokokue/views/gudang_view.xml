@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- toko.gudang tree view -->
+    <record id="toko_gudang_view_tree" model="ir.ui.view">
+        <field name="name">toko.gudang.view.tree</field>
+        <field name="model">toko.gudang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="stock"/>
+                <field name="harga"/>
+                <field name="total_buat"/>
+                <field name="total_terjual"/>
+                <field name="jenis"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.gudang form view -->
+    <record id="toko_gudang_view_form" model="ir.ui.view">
+        <field name="name">Form Gudang</field>
+        <field name="model">toko.gudang</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="stock"/>
+                        <field name="harga"/>
+                        <field name="total_buat"/>
+                        <field name="ls_kue"/>
+                        <field name="ls_bahan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- toko.gudang action window -->
+    <record id="toko_gudang_action" model="ir.actions.act_window">
+        <field name="name">Gudang Stock</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.gudang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem   
+        id="toko_gudang_menu_act" 
+        name="Gudang" 
+        parent="inventory_menu_categ" 
+        action="toko_gudang_action" 
+        sequence="20"/>
+
+</odoo>

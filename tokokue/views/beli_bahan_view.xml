@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- toko.beli_bahan tree view -->
+    <record id="toko_beli_bahan_view_tree" model="ir.ui.view">
+        <field name="name">toko.beli_bahan.view.tree</field>
+        <field name="model">toko.beli_bahan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="vendor_id"/>
+                <field name="gudang_id"/>
+                <field name="tgl_beli"/>
+                <field name="qty"/>
+                <field name="total_harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.beli_bahan form view -->
+    <record id="toko_beli_bahan_view_form" model="ir.ui.view">
+        <field name="name">Form Beli Bahan</field>
+        <field name="model">toko.beli_bahan</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="vendor_id"/>
+                            <field name="gudang_id"/>
+                            <field name="tgl_beli"/>
+                        </group>
+                        <group>
+                            <field name="qty"/>
+                            <field name="harga"/>
+                            <field name="total_harga"/>       
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- toko.beli_bahan action window -->
+    <record id="toko_beli_bahan_action" model="ir.actions.act_window">
+        <field name="name">Beli Bahan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.beli_bahan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="toko_beli_bahan_menu_act" 
+        name="Beli Bahan" 
+        parent="purchase_menu_categ" 
+        action="toko_beli_bahan_action" 
+        sequence="10"/>
+
+</odoo>
