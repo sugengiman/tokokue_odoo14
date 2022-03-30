@@ -10,9 +10,9 @@
                 <!-- Add your fields here -->
                 <field name="name"/>
                 <field name="chef_id"/>
+                <field name="gudang_id"/>
                 <field name="tgl_buat"/>
                 <field name="qty"/>
-                <field name="harga_jual"/>
             </tree>
         </field>
     </record>
@@ -25,13 +25,16 @@
             <form string="">
                 <sheet>
                     <group>
-                        <!-- Add your fields here -->
-                        <field name="name"/>
-                        <field name="chef_id"/>
-                        <field name="tgl_buat"/>
-                        <field name="qty"/>
-                        <field name="harga_jual"/>
-                        <field name="total_produksi"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="chef_id"/>
+                            <field name="gudang_id"/>
+                        </group>
+                        <group>
+                            <field name="qty"/>
+                            <field name="tgl_buat"/>
+                            <field name="total_produksi"/>
+                        </group>
                     </group>
                     <group>
                         <field name="bahan_baku_ids">

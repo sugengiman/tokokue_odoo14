@@ -34,6 +34,7 @@
         'views/vendor_view.xml',
         'views/beli_bahan_view.xml',
         'views/buat_kue_view.xml',
+        'views/customer_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

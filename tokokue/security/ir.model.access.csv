@@ -5,3 +5,4 @@ access_toko_vendor,tokokue.toko.vendor,model_toko_vendor,,1,1,1,1
 access_toko_beli_bahan,tokokue.toko.beli_bahan,model_toko_beli_bahan,,1,1,1,1
 access_toko_buat_kue,tokokue.toko.buat_kue,model_toko_buat_kue,,1,1,1,1
 access_toko_bahan_produksi,tokokue.toko.bahan_produksi,model_toko_bahan_produksi,,1,1,1,1
+access_toko_customer,tokokue.toko.customer,model_toko_customer,,1,1,1,1
